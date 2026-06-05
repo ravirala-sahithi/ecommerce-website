@@ -19,7 +19,7 @@ function displayCart(products) {
     }
 
     cart.forEach(item => {
-        let product = products.find(p =>Number(p.id) === Number(item.id);
+        let product = products.find(p =>Number(p.id) === Number(item.id));
         if (!product) return;
 
         let subtotal = product.price * item.quantity;
@@ -37,7 +37,7 @@ function displayCart(products) {
                             <p>Price: ₹${product.price}</p>
                             <div>
                                 <button class="btn btn-sm btn-danger" onclick="decreaseQty(${item.id})">-</button>
-                                <span class="mx-2">${product.quantity}</span>
+                                <span class="mx-2">${item.quantity}</span>
                                 <button class="btn btn-sm btn-success" onclick="increaseQty(${item.id})">+</button>
                             </div>
                             <p class="mt-3">Subtotal: ₹${subtotal}</p>
@@ -49,12 +49,12 @@ function displayCart(products) {
         `;
     });
 
-    document.getElementById("cartTotal").innerText = 0;
+    document.getElementById("cartTotal").innerText = total;
 }
 
 function increaseQty(id) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    let item = cart.find(i => i.id === id);
+    let item = cart.find(i => Number(i.id) === Number(id));
     if (!item) return;
 
     item.quantity++;
@@ -65,7 +65,7 @@ function increaseQty(id) {
 function decreaseQty(id) 
 {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    let item = cart.find(i => i.id === id);
+    let item = cart.find(i => Number(i.id) === Number(id));
     if(item.quantity > 1)
     {
         item.quantity--;
@@ -77,7 +77,7 @@ function decreaseQty(id)
 function removeItem(id) 
 {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart = cart.filter(i => i.id !== id);
+    cart = cart.filter(i => Number(i.id) !== Number(id));
     localStorage.setItem("cart", JSON.stringify(cart));
     location.reload();
 }
