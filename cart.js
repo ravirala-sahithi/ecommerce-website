@@ -22,7 +22,7 @@ function displayCart(products) {
         let product = products.find(p => p.id === item.id);
         if (!product) return;
 
-        let subtotal = product.price * item.quantity;
+        let subtotal = product.price * product.quantity;
         total += subtotal;
 
         cartContainer.innerHTML += `
@@ -37,7 +37,7 @@ function displayCart(products) {
                             <p>Price: ₹${product.price}</p>
                             <div>
                                 <button class="btn btn-sm btn-danger" onclick="decreaseQty(${item.id})">-</button>
-                                <span class="mx-2">${item.quantity}</span>
+                                <span class="mx-2">${product.quantity}</span>
                                 <button class="btn btn-sm btn-success" onclick="increaseQty(${item.id})">+</button>
                             </div>
                             <p class="mt-3">Subtotal: ₹${subtotal}</p>
@@ -55,7 +55,7 @@ function displayCart(products) {
 function increaseQty(id) {
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
     let item = cart.find(i => i.id === id);
-    if (!item) return;
+    if (!product) return;
 
     item.quantity++;
     localStorage.setItem("cart", JSON.stringify(cart));
