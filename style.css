@@ -61,6 +61,11 @@ body{
     padding: 10px 20px;
 }
 
+.navbar {
+    position: relative;
+    z-index: 9999 !important;
+}
+
 footer{
     margin-top: 50px;
 }
