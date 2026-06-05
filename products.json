@@ -5,7 +5,7 @@
         "category": "Electronics",
         "price": 4999,
         "rating": 4.5,
-        "image": "images/product1.jpg",
+        "image": "product1.jpg",
         "description": "Premium smart watch with fitness tracking, heart rate monitoring, and customizable watch faces. Stay connected and stylish with this versatile accessory."
     },
     {
@@ -14,7 +14,7 @@
         "category": "Electronics",
         "price": 2999,
         "rating": 4.2,
-        "image": "images/product2.jpeg",
+        "image": "product2.jpeg",
         "description": "Noise cancelling wireless headphones with superior sound quality and long battery life. Perfect for music lovers and on-the-go use."
     },
     {
@@ -23,7 +23,7 @@
         "category": "Shoes",
         "price": 3999,
         "rating":4.4,
-        "image": "images/shoes.jpg",
+        "image": "shoes.jpg",
         "description": "High-performance running shoes designed for comfort and durability. Perfect for daily runs and training sessions."
     },
     {
@@ -32,7 +32,7 @@
         "category": "Fashion",
         "price": 899,
         "rating": 4.1,
-        "image": "images/fashion.jpg",
+        "image": "fashion.jpg",
         "description": "Comforatble cotton t-shirt with a stylish design. Available in various colors and sizes for a perfect fit."
     }
 ]
