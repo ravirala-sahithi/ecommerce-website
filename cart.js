@@ -14,7 +14,7 @@ function displayCart(products) {
 
     if (cart.length === 0) {
         cartContainer.innerHTML = '<div class="alert alert-info">Your cart is empty.</div>';
-        document.getElementById("totalAmount").innerText = `Total: ₹${total}`;
+        document.getElementById("cartTotal").innerText = total;
         return;
     }
 
@@ -49,7 +49,7 @@ function displayCart(products) {
         `;
     });
 
-    document.getElementById("totalAmount").innerText = `Total: ₹${total}`;
+    document.getElementById("cartTotal").innerText = 0;
 }
 
 function increaseQty(id) {
