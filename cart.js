@@ -19,7 +19,7 @@ function displayCart(products) {
     }
 
     cart.forEach(item => {
-        let product = products.find(p => p.id === item.id);
+        let product = products.find(p =>Number(p.id) === Number(item.id);
         if (!product) return;
 
         let subtotal = product.price * product.quantity;
