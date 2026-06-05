@@ -12,7 +12,7 @@ function showProduct(product) {
     document.getElementById("productDetails").innerHTML = `
     <div class="row">
         <div class="col-md-6">
-            <img src="${product.image}" class="img-fluid" alt="${product.name}">
+            <img src="${product1.jpg}" class="img-fluid" alt="${product.name}">
         </div>
         <div class="col-md-6">
             <h2>${product.name}</h2>
@@ -32,7 +32,7 @@ function showRelated(products, category, currentId) {
         html += `
             <div class="col-md-4">
                 <div class="card">
-                    <img src="${product.image}" class="card-img-top" alt="${product.name}">
+                    <img src="${product2.jpeg}" class="card-img-top" alt="${product.name}">
                     <div class="card-body">
                         <h5>${product.name}</h5>
                         <p>₹${product.price}</p>
