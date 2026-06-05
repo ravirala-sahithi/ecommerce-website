@@ -53,8 +53,9 @@ body{
     cursor: pointer;
 }
 
-.btn{
-    border-radius: 25px;
+.remove-btn{
+    width: auto;
+    min-width: 100px;
 }
 
 .btn-primary{
